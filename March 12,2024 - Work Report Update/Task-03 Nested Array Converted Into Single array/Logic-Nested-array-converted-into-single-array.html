@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlatArray Display show</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .conatiner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: brown;
+      }
+      .span-class {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        padding: 10px 5px;
+        text-align: center;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conatiner">
+      <div class="sub-container">
+        <h1>Given Array : [11, 12, 14, [111, 35, 34], 15]</h1>
+        <button onclick="CalculateValue()">flat element</button>
+        <div class="span-class">
+          <h1>Result Array :</h1>
+          <h1 id="showResult"></h1>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let arr = [11, 12, 14, [111, 35, 34], 15];
+    let resultArray = [];
+
+    //*---------- Normal Loop using------------
+    for (let index = 0; index < arr.length; index++) {
+      let currentElementType = typeof arr[index];
+
+      // check the data type of object
+      if (currentElementType === "object") {
+        let InnerArray = arr[index];
+
+        InnerArray.forEach((Element) => {
+          let popObjectElement = Element;
+          resultArray.push(popObjectElement);
+        });
+        // check the data type of current element in number
+      } else if (currentElementType === "number") {
+        let popNumberElement = arr[index];
+        resultArray.push(popNumberElement);
+      }
+    }
+
+    let resultDisplay = document.getElementById("showResult");
+    function CalculateValue() {
+      resultDisplay.innerHTML = resultArray;
+    }
+  </script>
+</html>

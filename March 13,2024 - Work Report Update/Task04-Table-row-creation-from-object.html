@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #TableStyle {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      #TableStyle td,
+      #TableStyle th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #TableStyle tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      #TableStyle th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04aa6d;
+        color: white;
+      }
+      #TableStyle tr:hover {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="TableStyle">
+      <thead>
+        <tr>
+          <th width="20%">Name</th>
+          <th width="20%">Age</th>
+          <th width="20%">Status</th>
+          <th width="20%">city</th>
+        </tr>
+      </thead>
+      <!-- Table Body  -->
+      <tbody id="tableBody"></tbody>
+    </table>
+    <button onclick="buttonClickInsert()">Add row</button>
+    <button onclick="buttonClickRemove()">Remove row</button>
+  </body>
+  <script>
+    const data = [
+      {
+        name: "Kapil",
+        age: 21,
+        status: "Active",
+        city: "Rampur",
+      },
+    ];
+
+    // 2-D Array of object - to store the Frequency of, inserting into the Row(column)
+    var resultData = [];
+
+    function buttonClickInsert() {
+      resultData.push(data[resultData.length]);
+      console.log("resultData", JSON.stringify(resultData));
+      addRowLogic();
+      resultData.push(data[resultData.length]);
+      console.log(resultData);
+    }
+
+    function addRowLogic() {
+      let tableBody = document.getElementById("tableBody");
+      //remove all existing rows
+
+      for (let index = 0; index < data.length; index++) {
+        var nameUser = data[index].name;
+        var ageUser = data[index].age;
+        var statusUser = data[index].status;
+        var cityUser = data[index].city;
+
+        // Create the row in HTML
+        var tr = document.createElement("tr");
+
+        // Create the col in HTML
+        let nameCell = document.createElement("td");
+        let ageCell = document.createElement("td");
+        let statusCell = document.createElement("td");
+        let cityCell = document.createElement("td");
+
+        nameCell.appendChild(document.createTextNode(nameUser));
+        ageCell.appendChild(document.createTextNode(ageUser));
+        statusCell.appendChild(document.createTextNode(statusUser));
+        cityCell.appendChild(document.createTextNode(cityUser));
+
+        // Append Child-4 used to insert the Table-Row
+        tr.appendChild(nameCell);
+        tr.appendChild(ageCell);
+        tr.appendChild(statusCell);
+        tr.appendChild(cityCell);
+
+        tableBody.appendChild(tr);
+      }
+    }
+
+    // Remove Function called
+    function buttonClickRemove() {
+      let tableBody = document.getElementById("tableBody");
+      let removeChild = tableBody.firstChild;
+      removeChild.remove();
+      // we have to pop the object into the Array of object
+      resultData.pop();
+    }
+  </script>
+</html>

@@ -1,0 +1,28 @@
+
+/* ---------------------------CSS degisn---------------*/
+
+#TableStyle {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#TableStyle td,
+#TableStyle th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#TableStyle tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#TableStyle th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+#TableStyle tr:hover {
+  background-color: #ddd;
+}

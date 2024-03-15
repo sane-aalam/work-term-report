@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .color-output {
+        background-color: brown;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sub-conatiner">
+        <form action="">
+          <label for="">Enter the User Name : </label>
+          <input
+            type="text"
+            class="input-text"
+            onchange="TextDisplay(this.value)"
+          />
+          <br />
+          <label for="">Enter the Email Id : </label>
+          <input
+            type="email"
+            class="input-email"
+            onchange="EmailDisplay(this.value)"
+          />
+        </form>
+      </div>
+
+      <div class="color-output">
+        <h1>Print the Output Into display</h1>
+        <div class="displayData1"></div>
+        <div class="displayData2"></div>
+      </div>
+
+      <hr />
+      <button id="btn" onclick="buttonClicked()">Show the data</button>
+    </div>
+  </body>
+  <script>
+    console.log("----------js working!----------");
+
+    function TextDisplay(text1) {
+      console.log(text1);
+      document.querySelector(".displayData1").textContent = text1;
+    }
+
+    function EmailDisplay(email1) {
+      console.log(email1);
+      document.querySelector(".displayData2").textContent = email1;
+    }
+
+    let btn = document.getElementById("btn");
+    function buttonClicked() {
+      console.log("clicked button");
+    }
+  </script>
+</html>

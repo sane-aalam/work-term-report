@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="toggleDropdown()">Hide and show</button>
+    <div id="games-dropdown">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquid.
+      Voluptates, ipsam deleniti excepturi, eligendi quam in nemo maxime
+      laboriosam magnam facilis corrupti vero sapiente exercitationem, quaerat
+      reiciendis dolor sed.
+    </div>
+  </body>
+  <script>
+    // Display - None
+    var dropdown = document.getElementById("games-dropdown");
+
+    function toggleDropdown() {
+      if (dropdown.style.display === "none") {
+        dropdown.style.display = "block";
+      } else {
+        dropdown.style.display = "none";
+      }
+    }
+  </script>
+</html>

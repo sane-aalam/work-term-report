@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="UTF-8">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Using change event for Input element Content Show into display</title>  
+</head>  
+<body align="center">  
+   <input type="text" class="textclass">  
+    <input type="button" value="Show the data">  
+    </br>  
+    <!-- This div is used to show the text contents -->
+    <div id="showDisplay"> </div>  
+</body> 
+<script>  
+    let textContainer = document.querySelector('.textclass');  
+    let targetConatiner = document.querySelector('#showDisplay'); 
+    
+    textContainer.addEventListener('change', function () {  
+      targetConatiner.textContent = this.value;  
+    });  
+  </script>   
+</html>  
