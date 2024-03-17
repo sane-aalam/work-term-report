@@ -140,7 +140,6 @@ button:hover{
 3. when user click the button Then,
 4. how the chat-box
 */
-
   .chat-popup {
     /* by default,we can set display none
     , using javascript, we will click the button the we are able to show the chat box */
@@ -184,3 +183,9 @@ button:hover{
     background-color: red;
     padding: 16px 32px;
   }
+  
+/* 
+  #color-closed-button:hover{
+    background-color: black;
+    color: white;
+  } */
