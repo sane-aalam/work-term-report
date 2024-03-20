@@ -1,0 +1,50 @@
+
+//-------------------- step by step breakdown problem statement-----------------
+// 1- select all the input field and form
+// 2- checkout which field we are changing tha data (e.targat.id) - INPUT Field par
+// 3- There are 3 things you have checkout
+// userName - not gonna to more than 26
+// UserEmail - correct email input
+// UserPassword - more than 8 letter
+// conformPassword - more than 8 Letter
+
+
+1. addEventListener('input', function()) =>
+This function will be called when the value of the input element changes.
+
+2. Valid Email - /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+ Browsers automatically provide validation to ensure that only text that matches the standard format for Internet email addresses is entered into the input box. Browsers use an algorithm equivalent to the following regular expression:
+
+3. we will see the JavaScriopt program to check and validate a strong or weak password with a custom-defined range. To accomplish this task we will use JavaScript Regular Expression.
+
+A Regular Expression is a sequence of characters that forms a search pattern. The search pattern can be used for text search and text to replace operations. A regular expression can be a single character or a more complicated pattern. 
+
+A strong password will be of a minimum 8 characters to max range according to user need (max limit is set to 15 characters for this post). It must include the following:
+
+case-1 At least one lowercase alphabet i.e. [a-z]
+caes-2 At least one uppercase alphabet i.e. [A-Z]
+case-3 At least one Numeric digit i.e. [0-9]
+case-4 At least one special character i.e. [‘@’, ‘$’, ‘.’, ‘#’, ‘!’, ‘%’, ‘*’, ‘?’, ‘&’, ‘^’]
+case-5 (totalRange<8) Also, the total length must be in the range [8-15]
+
+4. Text Method =>
+The test() method is indeed called upon a RegExp object. It performs a search operation on the specified text using the pattern provided by the RegExp object.
+
+5.  
+<div id="myDiv">
+  <input type="text" id="myInput" />
+  <span></span>
+</div>
+
+<script>
+  var input = document.getElementById("myInput");
+  var parentElement = input.parentElement;
+
+  console.log(parentElement); // This will log the div element with the id "myDiv"
+</script>
+
+
+5. CSS color used =>
+      Error-color: #dc3545;
+      Success-color: #28a745;
+      Warning-color: #ffc107;

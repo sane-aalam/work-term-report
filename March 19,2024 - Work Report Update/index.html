@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="">
+      <div class="box">
+        <div class="wizard">
+          <div class="wizard-step past">
+            <div class="wizard-step-child" id="active-first-child">1</div>
+          </div>
+          <div class="wizard-step past">
+            <div class="wizard-step-child" id="active-second-child">2</div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- first form -->
+    <div class="container" id="HideForm">
+      <!-- you have to select complete form while, you are trying to sumbit the form -->
+      <form id="signup" class="form">
+        <h1>Sign Up</h1>
+        <div class="form-field">
+          <label for="username">Enter Username:</label>
+          <input type="text" name="username" id="username" autocomplete="off" />
+          <span></span>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Enter Email:</label>
+          <input type="text" name="email" id="email" autocomplete="off" />
+          <span></span>
+        </div>
+
+        <div class="form-field">
+          <label for="mobile">Enter Mobile:</label>
+          <input type="tel" name="mobile" id="mobile" autocomplete="off" />
+          <span></span>
+        </div>
+
+        <div class="form-field">
+          <label for="password">Enter Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            autocomplete="off"
+          />
+          <span></span>
+        </div>
+
+        <div class="form-field">
+          <label for="confirm-password">Enter Confirm Password:</label>
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+            autocomplete="off"
+          />
+          <span></span>
+        </div>
+
+        <div class="form-field">
+          <input type="submit" value="Sign Up" class="btn" />
+        </div>
+      </form>
+    </div>
+
+    <!-- second div -->
+    <div class="container" id="ShowForm">
+      <!-- you have to select complete form while, you are trying to sumbit the form -->
+      <form id="signup" class="form">
+        <h1>Sign Up</h1>
+        <div class="form-field">
+          <label for="username">Enter Username:</label>
+          <input type="text" name="username" id="username" autocomplete="off" />
+          <span></span>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Enter Email:</label>
+          <input type="text" name="email" id="email" autocomplete="off" />
+          <span></span>
+        </div>
+
+
+        <div class="form-field">
+          <label for="password">Enter Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            autocomplete="off"
+          />
+          <span></span>
+        </div>
+
+        <div class="form-field">
+          <input type="submit" value="Sign Up" class="btn" />
+        </div>
+      </form>
+    </div>
+    <script src="file.js"></script>
+  </body>
+</html>

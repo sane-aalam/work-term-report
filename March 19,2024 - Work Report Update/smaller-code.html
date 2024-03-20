@@ -1,0 +1,33 @@
+// small things to understand
+
+<div id="myDiv">
+  <input type="text" id="myInput" />
+  <span></span>
+</div>
+
+<script>
+  var input = document.getElementById("myInput");
+  var parentElement = input.parentElement;
+
+  console.log(parentElement); // This will log the div element with the id "myDiv"
+</script>
+
+<div class="wizard">
+  <div class="wizard-bar" style="width: 0" data-wizard-bar></div>
+  <ul class="wizard-list">
+    <li class="wizard-item" data-wizard-item>1</li>
+    <li class="wizard-item" data-wizard-item>2</li>
+  </ul>
+</div>
+
+// PHone number validation
+function ValidateUSPhoneNumber(phoneNumber) {
+    var regExp = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/;
+    var phone = phoneNumber.match(regExp);
+    if (phone) {
+      alert('yes');
+      return true;
+    }
+    alert('no');
+    return false;
+}
