@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .collapsible {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="section2">
+      <button type="button" class="collapsible" onclick="HideAndShow(event)">
+        Open Collapsible
+      </button>
+      <div class="content" id="section2">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+    <div id="section2">
+      <button type="button" class="collapsible" onclick="HideAndShow(event)">
+        Open Collapsible
+      </button>
+      <div class="content" id="section2">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+    <div id="section2">
+      <button type="button" class="collapsible" onclick="HideAndShow(event)">
+        Open Collapsible
+      </button>
+      <div class="content" id="section2">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    var content = document.getElementsByClassName("content");
+    console.log(content);
+
+    for (let i = 0; i < content.length; i++) {
+      content[i].style.display = "none";
+    }
+
+    function HideAndShow(e) {
+      let nextElement = e.tar
+    }
+  </script>
+</html>
