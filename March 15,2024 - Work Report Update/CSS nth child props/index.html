@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nthchild</title>
+    <style>
+      ul {
+        background-color: gray;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      ul li {
+        list-style-type: none;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 1200px;
+        height: 20px;
+      }
+      li:nth-child(even) {
+        background-color: red;
+      }
+      li:nth-child(odd) {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>List1</li>
+      <li>List2</li>
+      <li>List3</li>
+      <li>List4</li>
+      <li>List5</li>
+      <li>List6</li>
+    </ul>
+  </body>
+</html>
