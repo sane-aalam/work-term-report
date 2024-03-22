@@ -4,7 +4,7 @@ function ClickEvent(allInputSelect) {
     if (input.value === "") {
       input.style.borderColor = "red";
       input.style.borderWidth = "5px";
-      // input.value = "Enter the correct value";
+      input.value = "Enter the correct value";
       let controlAlert = false;
       return controlAlert;
     } else {
